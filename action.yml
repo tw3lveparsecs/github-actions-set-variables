@@ -1,5 +1,9 @@
 name: 'Set environment variables'
+author: 'tw3lveparsecs'
 description: 'Configures environment variables for a GitHub workflow'
+branding:
+  icon: 'code'
+  color: 'blue'
 inputs:
   envFilePath:
     description: 'File path to variable file or directory. Defaults to ./.github/variables/* if none specified and runs against each file in that directory.'
