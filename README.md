@@ -1,23 +1,25 @@
-# Setvars
+# Set Variables
 
-This action sets environment variables for your GitHub workflow from variables in an environment variable (.env) file or from a directory containing multiple environment variable files. 
+GitHub action that sets environment variables for your GitHub workflow.
 
 ## Usage
+The action has a required input called `envFilePath`. This sets the path to the file or directory containing the environment variables to set for the GitHub workflow.
+
 
 ### Single environment variable file
 ```yml
-- name: Configure Environment Variables
+- name: Set Environment Variables
   uses: tw3lveparsecs/github-actions-setvars@v0.1
   with:
-    varFilePath: ./drop/.github/variables/vars.env
+    envFilePath: ./drop/.github/variables/vars.env
 ```
 
 ### Directory containing multiple environment variable files
 ```yml
-- name: Configure Environment Variables
+- name: Set Environment Variables
   uses: tw3lveparsecs/github-actions-setvars@v0.1
   with:
-    varFilePath: ./drop/.github/variables/*
+    envFilePath: ./drop/.github/variables/*
 ```
 
 # License
