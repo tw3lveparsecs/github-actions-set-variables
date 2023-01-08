@@ -1,17 +1,17 @@
-name: 'Set environment variables'
-author: 'tw3lveparsecs'
-description: 'Configures environment variables for a GitHub workflow'
+name: "Set environment variables"
+author: "tw3lveparsecs"
+description: "Configures environment variables for a GitHub workflow"
 branding:
-  icon: 'code'
-  color: 'blue'
+  icon: "code"
+  color: "blue"
 inputs:
   envFilePath:
-    description: 'File path to variable file or directory. Defaults to ./.github/variables/* if none specified and runs against each file in that directory.'
+    description: "File path to variable file or directory. Defaults to ./.github/variables/* if none specified and runs against each file in that directory."
     required: false
     default: ./.github/variables/*
 runs:
   using: "composite"
   steps:
     - run: |
-        sed "" ${{ inputs.envFilePath }} >> $GITHUB_ENV
+        sed "/#/d" ${{ inputs.envFilePath }} >> $GITHUB_ENV
       shell: bash
