@@ -10,7 +10,7 @@ The action has a required input called `envFilePath`. This sets the path to the 
 
 ```yml
 - name: Set Environment Variables
-  uses: tw3lveparsecs/github-actions-setvars@latest
+  uses: tw3lveparsecs/github-actions-set-variables@latest
   with:
     envFilePath: ./drop/.github/variables/vars.env
 ```
@@ -19,7 +19,7 @@ The action has a required input called `envFilePath`. This sets the path to the 
 
 ```yml
 - name: Set Environment Variables
-  uses: tw3lveparsecs/github-actions-setvars@latest
+  uses: tw3lveparsecs/github-actions-set-variables@latest
   with:
     envFilePath: ./drop/.github/variables/*
 ```
